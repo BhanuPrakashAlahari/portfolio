@@ -44,8 +44,9 @@ const Contact = () => {
         setErrorMessage('');
 
         try {
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5001';
-            const response = await fetch(`${apiUrl}/api/contact`, {
+            // In Vercel deployment with rewrites, we can just use the relative path /api/contact
+            // This works for both local dev (if proxy setup) and production
+            const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

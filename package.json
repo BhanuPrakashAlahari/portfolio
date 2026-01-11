@@ -1,0 +1,11 @@
+{
+    "name": "portfolio-root",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "cd frontEnd && npm install && npm run build"
+    },
+    "dependencies": {
+        "nodemailer": "^6.9.13"
+    }
+}
